@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="button" id="button"><br>   
+    <canvas id="cvs" width="1000" height="600" id="cas"></canvas>
+
+</body>
+<script src="lzh.js"></script>
+<script>
+    var cas=document.getElementById("cvs");
+    var cts=cas.getContext("2d");
+    var button=document.getElementById("button");
+    var ipt=document.getElementById("name");
+    cts.textAlign='center';
+    cts.textBaseLine='middle';
+    cts.font="200px microsoft yahei";
+    cts.fillStyle='#aaa';
+    var context=new Context(cts,ipt);
+    button.onclick=function(){
+        context._begin();
+    }
+    
+   
+</script>
+</html>
